@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">About ClusterApp</h1>
+    <p class="lead mt-3">
+        ClusterApp is a web application designed to perform <strong>K-Means Clustering</strong> on your datasets.
+        Visualize your data and group similar data points easily.
+    </p>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-3">
+            <img src="{{ url_for('static', filename='about_kmeans.png') }}" class="img-fluid rounded mb-3" alt="K-Means Illustration">
+            <h5 class="fw-bold">K-Means Clustering</h5>
+            <p>
+                K-Means is an unsupervised learning algorithm that partitions data into K distinct clusters.
+                ClusterApp automates this process and generates interactive scatter plots for analysis.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-3">
+            <img src="{{ url_for('static', filename='about_visualization.png') }}" class="img-fluid rounded mb-3" alt="Data Visualization">
+            <h5 class="fw-bold">Data Visualization</h5>
+            <p>
+                Each cluster is visualized using scatter plots. You can view relationships between features,
+                compare clusters, and generate PDF reports for documentation or presentation.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-3">
+            <h5 class="fw-bold mb-3">Contact Information</h5>
+            <p><strong>Phone:</strong> +92-300-1234567</p>
+            <p><strong>Email:</strong> support@clusterapp.pk</p>
+            <p><strong>Address:</strong> 123 Data Street, Lahore, Pakistan</p>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-3">
+            <h5 class="fw-bold mb-3">Our Location</h5>
+            <!-- Embedded Google Map -->
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1631.522636895188!2d76.57299009839474!3d30.768790200000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb140bd63e07%3A0x68591e334d17a988!2sChandigarh%20University!5e1!3m2!1sen!2sin!4v1761031367421!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mb-5">
+    <h3 class="fw-bold">Our Mission</h3>
+    <p>
+        ClusterApp aims to simplify data analysis for students, researchers, and businesses.
+        Generate clusters, visualize patterns, and create reports with ease.
+    </p>
+</div>
+
+{% endblock %}

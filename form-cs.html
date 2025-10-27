@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">Generate Clusters</h2>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm p-4 bg-white rounded">
+            <form method="POST" action="/generate-clusters" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Number of Clusters</label>
+                    <input type="number" class="form-control" name="num_clusters" min="2" max="10" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Algorithm Type</label>
+                    <select class="form-select" name="algo_type" required>
+                        <option value="k-means">K-Means</option>
+                        <option value="hierarchical">Hierarchical (Coming Soon)</option>
+                        <option value="DBSCAN">DBSCAN (Coming Soon)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Dataset</label>
+                    <select class="form-select" name="dataset" required>
+                        <option value="dataset1">Sales Transaction.csv</option>
+                        <option value="custom">Custom Upload</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Upload Custom Dataset</label>
+                    <input type="file" class="form-control" name="custom_dataset">
+                    <small class="text-muted">CSV, TXT, XLSX allowed</small>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-custom w-50">Generate Clusters</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

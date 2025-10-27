@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Project ReadMe</h1>
+    <p class="lead mt-3">
+        Everything you need to know about <strong>ClusterApp</strong> and how to use it for data clustering.
+    </p>
+</div>
+
+<div class="row mb-5">
+    <!-- Project Overview -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-info-circle-fill"></i> Project Overview</h4>
+            <p>
+                ClusterApp is a web application designed to perform <strong>K-Means Clustering</strong> on datasets.
+                Upload your data, visualize clusters, and generate PDF reports effortlessly.  
+                It is built using <strong>Python, Flask, Pandas, Matplotlib, Scikit-learn, and ReportLab</strong>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-lightning-fill"></i> Key Features</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Upload custom datasets (CSV, TXT, XLSX)</li>
+                <li class="list-group-item">Perform K-Means Clustering with adjustable cluster numbers</li>
+                <li class="list-group-item">Automatic removal of non-numeric data and NaN values</li>
+                <li class="list-group-item">Interactive scatter plots for cluster visualization</li>
+                <li class="list-group-item">Download PDF reports containing all plots</li>
+                <li class="list-group-item">Future support for DBSCAN and Hierarchical Clustering</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <!-- How to Use -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-play-circle-fill"></i> How to Use</h4>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Go to <strong>Start Clustering</strong> page.</li>
+                <li class="list-group-item">Select the number of clusters you want.</li>
+                <li class="list-group-item">Choose <strong>K-Means</strong> as algorithm.</li>
+                <li class="list-group-item">Upload a dataset or choose a predefined dataset.</li>
+                <li class="list-group-item">Click <strong>Generate Clusters</strong> to view results and plots.</li>
+                <li class="list-group-item">Optionally, download the PDF report.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded p-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-tools"></i> Technology Stack</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Python 3.12+</li>
+                <li class="list-group-item">Flask (Web Framework)</li>
+                <li class="list-group-item">Pandas (Data Handling)</li>
+                <li class="list-group-item">NumPy (Numeric Computation)</li>
+                <li class="list-group-item">Scikit-learn (Machine Learning)</li>
+                <li class="list-group-item">Matplotlib (Plots & Visualization)</li>
+                <li class="list-group-item">ReportLab (PDF Generation)</li>
+                <li class="list-group-item">Bootstrap 5 (Front-End Design)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mb-5">
+    <h3 class="fw-bold">Contact & Support</h3>
+    <p>
+        For questions, bug reports, or feedback, contact us at:  
+        <strong>Email:</strong> support@clusterapp.pk | <strong>Phone:</strong> +92-300-1234567
+    </p>
+    <a href="/" class="btn btn-custom mt-3">Back to Home</a>
+</div>
+
+{% endblock %}

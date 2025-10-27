@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Meet Our Team</h1>
+    <p class="lead mt-3">
+        The passionate minds behind ClusterApp, dedicated to data science and visualization.
+    </p>
+</div>
+
+<div class="row justify-content-center">
+    <!-- Team Member 1 -->
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-sm rounded text-center">
+            <img src="{{ url_for('static', filename='team_member1.jpg') }}" class="card-img-top" alt="Team Member 1">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Ali Khan</h5>
+                <p class="card-text">Data Scientist</p>
+                <p>
+                    <a href="mailto:ali@clusterapp.pk" class="text-decoration-none"><i class="bi bi-envelope"></i> Email</a><br>
+                    <a href="https://linkedin.com/in/alikhan" target="_blank" class="text-decoration-none"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-sm rounded text-center">
+            <img src="{{ url_for('static', filename='team_member2.jpg') }}" class="card-img-top" alt="Team Member 2">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Sara Ahmed</h5>
+                <p class="card-text">Frontend Developer</p>
+                <p>
+                    <a href="mailto:sara@clusterapp.pk" class="text-decoration-none"><i class="bi bi-envelope"></i> Email</a><br>
+                    <a href="https://linkedin.com/in/saraahmed" target="_blank" class="text-decoration-none"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-sm rounded text-center">
+            <img src="{{ url_for('static', filename='team_member3.jpg') }}" class="card-img-top" alt="Team Member 3">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Hassan Ali</h5>
+                <p class="card-text">Backend Developer</p>
+                <p>
+                    <a href="mailto:hassan@clusterapp.pk" class="text-decoration-none"><i class="bi bi-envelope"></i> Email</a><br>
+                    <a href="https://linkedin.com/in/hassanalir" target="_blank" class="text-decoration-none"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

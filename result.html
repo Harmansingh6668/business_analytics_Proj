@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">Clustering Results</h2>
+
+<div class="card p-3 mb-4 shadow-sm bg-white rounded">
+    <h5 class="fw-bold">Dataset Preview</h5>
+    <div class="table-responsive">
+        {{ table_html|safe }}
+    </div>
+</div>
+
+<h5 class="fw-bold mb-3">Generated Plots</h5>
+<div class="row">
+    {% for img in image_names %}
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm rounded overflow-hidden">
+            <img src="{{ url_for('static', filename='plots/' + img) }}" class="img-fluid">
+            <div class="p-2 text-center bg-light">{{ img }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="text-center mt-4">
+    <a href="/download-pdf" class="btn btn-custom btn-lg">Download PDF Report</a>
+</div>
+{% endblock %}

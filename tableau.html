@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Data Visualization Dashboard</h1>
+    <p class="lead mt-3">Explore your dataset through interactive visualizations</p>
+</div>
+
+<div class="container">
+    <!-- Dataset Selection -->
+    <div class="card p-4 mb-5 shadow-sm" data-aos="fade-up">
+        <h4 class="fw-bold mb-3">Select Dataset</h4>
+        <form action="{{ url_for('tableau') }}" method="get">
+            <div class="form-group mb-3">
+                <select class="form-control" name="dataset" onchange="this.form.submit()">
+                    <option value="sales" {% if selected_dataset == 'sales' %}selected{% endif %}>Sales Transaction Dataset</option>
+                    <option value="geolocation" {% if selected_dataset == 'geolocation' %}selected{% endif %}>Geolocation Dataset</option>
+                    <option value="sports" {% if selected_dataset == 'sports' %}selected{% endif %}>Sports Performance Dataset</option>
+                    <option value="wine" {% if selected_dataset == 'wine' %}selected{% endif %}>Wine Quality Dataset</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <!-- Main Visualizations -->
+    <div class="row">
+        <!-- Scatter Plot -->
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 shadow-sm" data-aos="fade-up">
+                <h4 class="fw-bold mb-3">Feature Relationship</h4>
+                {{ scatter_plot|safe }}
+            </div>
+        </div>
+
+        <!-- Distribution Plot -->
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 shadow-sm" data-aos="fade-up">
+                <h4 class="fw-bold mb-3">Distribution Analysis</h4>
+                {{ dist_plot|safe }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary Statistics -->
+    <div class="card p-4 mb-5 shadow-sm" data-aos="fade-up">
+        <h4 class="fw-bold mb-3">Summary Statistics</h4>
+        <div class="table-responsive">
+            {{ stats_table|safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
